@@ -1,0 +1,31 @@
+* { box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center;
+  background: #f1f5f9; color: #14141a;
+}
+.card {
+  width: 100%; max-width: 400px; background: #fff; padding: 28px;
+  border-radius: 12px; border-top: 6px solid #030ab4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.badge {
+  font-size: 11px; font-weight: 700; color: #030ab4;
+  background: #eef2ff; padding: 4px 8px; border-radius: 4px;
+}
+h1 { margin: 12px 0 4px; font-size: 24px; }
+.subtitle { margin: 0 0 20px; font-size: 14px; color: #64748b; }
+label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+input {
+  width: 100%; padding: 10px; margin-bottom: 14px;
+  border: 1px solid #cbd5e1; border-radius: 6px; font-size: 15px;
+}
+button {
+  width: 100%; padding: 12px; background: #030ab4; color: #fff;
+  border: none; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer;
+}
+button:hover { background: #02088a; }
+.resultado {
+  margin-top: 20px; padding: 14px; background: #f8fafc;
+  border-radius: 8px; border: 1px solid #e2e8f0; display: grid; gap: 6px;
+}
+.total { margin-top: 6px; padding-top: 8px; border-top: 1px dashed #cbd5e1; font-size: 18px; color: #030ab4; }

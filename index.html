@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Frete · CAECOMP UEMG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <span class="badge">CAECOMP · UEMG 2026</span>
+    <h1>Calculadora de Frete</h1>
+    <p class="subtitle">Simulação prática de GitFlow e Pull Requests</p>
+
+    <form id="form-frete">
+      <label for="cep">CEP de Entrega (35xxx-xxx = Regional)</label>
+      <input type="text" id="cep" value="35500-000" required />
+
+      <label for="subtotal">Subtotal do Pedido (R$)</label>
+      <input type="number" id="subtotal" value="100" step="0.01" required />
+
+      <button type="submit">Calcular Frete</button>
+    </form>
+
+    <section id="resultado" class="resultado">
+      <div>Região: <strong id="res-regiao">-</strong></div>
+      <div>Frete aplicado: <strong id="res-frete">R$ 0,00</strong></div>
+      <div class="total">Total: <strong id="res-total">R$ 0,00</strong></div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { calcularFrete } from './src/frete.js';
+
+    const form = document.getElementById('form-frete');
+    const atualizarTela = () => {
+      const cep = document.getElementById('cep').value;
+      const subtotal = Number(document.getElementById('subtotal').value) || 0;
+      const { frete, total, regiao } = calcularFrete(cep, subtotal);
+
+      document.getElementById('res-regiao').textContent = regiao;
+      document.getElementById('res-frete').textContent = `R$ ${frete.toFixed(2)}`;
+      document.getElementById('res-total').textContent = `R$ ${total.toFixed(2)}`;
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      atualizarTela();
+    });
+
+    atualizarTela();
+  </script>
+</body>
+</html>
