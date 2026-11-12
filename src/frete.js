@@ -10,5 +10,6 @@ export function calcularFrete(cep, subtotal) {
     frete,
     total: Number((subtotal + frete).toFixed(2)),
     regiao: String(cep).trim().startsWith('35') ? 'Regional (DDD 35)' : 'Nacional'
+    //regiao: String(cep).trim().startsWith('35') ? 'Regional (DDD 35)' : 'Nacional'
   };
 }
