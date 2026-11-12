@@ -11,3 +11,5 @@ python3 -m http.server 3000
 ```
 
 Abra `http://localhost:3000` (ou a URL encaminhada pelo Codespaces) no navegador.
+
+boa tarde
