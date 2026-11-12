@@ -1,6 +1,6 @@
 export function calcularFrete(cep, subtotal) {
-  const taxaRegional = 20;
-  const taxaNacional = 35;
+  const taxaRegional = 40;
+  const taxaNacional = 70;
 
   const frete = String(cep).trim().startsWith('35')
     ? taxaRegional
