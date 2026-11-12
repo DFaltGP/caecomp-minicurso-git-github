@@ -10,4 +10,5 @@ Inicie um servidor HTTP simples na raiz do projeto:
 python3 -m http.server 3000
 ```
 
-Abra `http://localhost:3000` (ou a URL encaminhada pelo Codespaces) no navegador.
+Abra `http://localhost:3000` (ou a URL encaminhada pelo Codespaces) no navegador. boooooooooooooooooooooom dia
+
